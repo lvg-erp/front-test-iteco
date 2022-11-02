@@ -14,16 +14,12 @@ export const AuthProvaider = ({children}: any) => {
     const toggle = () => setAuth(!auth)
 
     return (
-        // <AlertContext.Provider value={alert}>
-        //     { children }
-        // </AlertContext.Provider>
-        // <AuthContext.Provider value={{
-        //     visible: alert,
-        //     toggle
-        // }}>
-        //     { children }
-        // </AuthContext.Provider>
+          <AuthContext.Provider value={{
+            visible: auth,
+            toggle
+        }}>
+            { children }
+        </AuthContext.Provider>
 
-        true
     )
 }
